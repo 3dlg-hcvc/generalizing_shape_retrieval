@@ -1,0 +1,43 @@
+data:
+  name: scan2cad
+
+  module: gcmic.dataset.scan2cad
+  classname: Scan2CAD
+  loader: scan2cad_loader
+  task: train
+  split:
+
+  raw_path: ${DATA_PATH.scan2cad.raw}
+  preprocessed_path: ${DATA_PATH.scan2cad.preprocessed}
+  h5_path: ${DATA_PATH.scan2cad.preprocessed}/scan2cad.h5 # 
+  mv_path: ${DATA_PATH.scan2cad.preprocessed}/scan2cad_mv.h5
+  obj_path: ${DATA_PATH.scan2cad.preprocessed}/scan2cad_obj.h5
+  lfd_path: ${DATA_PATH.scan2cad.preprocessed}/lfd_200.h5
+  pose_path: ${DATA_PATH.scan2cad.preprocessed}/scan2cad_pose.json
+  annotation_file: scan2cad_annotation.txt 
+
+  img_source: image
+  mask_source: mask
+  use_crop: False
+  use_color_transfer: False
+  center_in_image: False
+  batch_size: 64
+  num_workers: 8
+
+  cat_list: [chair, bed, sofa, table]
+  cat_choice: [chair]
+
+  input_dim: 224
+
+  multiview:  
+    mv_dirname: neutral_multiviews_12
+    mv_num: 12
+    mv_dim: [224, 224]
+    mv_opt: crop
+
+  tour: 2
+  # random_model: False
+  test_only_occlusion: False
+  test_objects: all
+
+  unique_data_sampler: False

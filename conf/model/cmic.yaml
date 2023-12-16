@@ -1,0 +1,84 @@
+general:
+  task:  train #train, test, eval
+  manual_seed: 3104
+  dataset: pix3d
+  model: cmic
+  config: conf/model/cmic.yaml
+  output_root: output/
+  experiment: # TODO
+  
+
+model:
+  name: cmic
+  module: gcmic.model
+  classname: CMIC
+
+  img_in_dim: 4
+  img_feature_dim: 128
+  shape_in_dim: 1
+  shape_feature_dim: 128
+  use_vit_backbone: False
+  use_r18_backbone: False
+  use_attn_block: False
+  use_multihead_attn: False
+
+  tau: 0.1
+  beta: 0.2
+
+  pretrained_path: 
+  use_checkpoint: #last.ckpt
+  ckpt_path:
+  ckpt_monitor: micro_Acc@1
+  ckpt_mode: max
+  deployment_model_path: 
+  resume_epoch: 500
+
+
+train:
+  epochs: 50
+  steps: 48000
+  num_sanity_val_steps: 10
+  log_every_n_steps: 20
+  check_val_every_n_epoch: 1
+  val_check_interval: 1000
+
+  optim: 
+    classname: Adam # Adam or SGD
+    lr: 0.00005
+    momentum: 0.9 # SGD
+    weight_decay: 0.0005 # SGD
+  
+  save_freq: 10  # also eval_freq
+
+
+callbacks:
+  - CMICEvaluate
+
+  
+eval:
+  metrics:
+    use_acc: True
+    use_rr: False
+    use_cd: True
+    use_nc: False
+    use_f1: False
+    use_ap_mesh: False
+    use_lfd: True
+    use_mask_iou: True
+    use_single_lfd: True
+    use_lpips: True
+  task:
+  cat_list:
+  use_model:
+  save_vis: False
+
+
+log:
+  use_console_log: True
+  verbose: 1
+  # tb_names:
+  #   - total_loss
+  #   - mean_rank
+  #   - mean_r_rank
+  #   - normal_consistency
+  #   - mesh_ap

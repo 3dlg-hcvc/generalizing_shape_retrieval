@@ -1,0 +1,20 @@
+ROOT_PATH: /local-scratch/qiruiw/research/gcmic
+LOG_PATH: log
+OUTPUT_PATH: ${ROOT_PATH}/output
+
+DATA_PATH:
+  pix3d:
+    raw: /local-scratch/qiruiw/dataset/pix3d
+    preprocessed: /project/3dlg-hcvc/rlsd/data/pix3d
+  shapenet: 
+    raw: /local-scratch/qiruiw/dataset/shapenet
+    preprocessed: /project/3dlg-hcvc/rlsd/data/shapenet
+  scan2cad:
+    raw: /local-scratch/qiruiw/dataset/roca
+    preprocessed: /project/3dlg-hcvc/rlsd/data/scan2cad
+  moos:
+    raw: /project/3dlg-hcvc/rlsd/data/moos/scenes
+    preprocessed: /project/3dlg-hcvc/rlsd/data/moos
+  future3d:
+    raw: /local-scratch/qiruiw/dataset/3dfront
+    preprocessed: /project/3dlg-hcvc/rlsd/data/3dfuture

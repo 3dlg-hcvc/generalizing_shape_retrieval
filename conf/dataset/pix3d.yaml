@@ -1,0 +1,43 @@
+data:
+  name: pix3d
+
+  module: gcmic.dataset.pix3d
+  classname: Pix3D
+  loader: pix3d_loader
+  task: train
+  split:
+
+  raw_path: ${DATA_PATH.pix3d.raw}
+  preprocessed_path: ${DATA_PATH.pix3d.preprocessed}
+  h5_path: ${DATA_PATH.pix3d.preprocessed}/pix3d_224.h5
+  mv_path: ${DATA_PATH.pix3d.preprocessed}/pix3d_mv.h5
+  obj_path: ${DATA_PATH.pix3d.preprocessed}/pix3d_obj.h5
+  lfd_path: ${DATA_PATH.pix3d.preprocessed}/lfd_200.h5
+  raw_img_path: ${DATA_PATH.pix3d.preprocessed}/pix3d_img_path.txt
+  pose_path: ${DATA_PATH.pix3d.preprocessed}/pix3d_pose.json
+  annotation_file: pix3d_annotation_all.txt 
+
+  img_source: image
+  mask_source: mask
+  use_crop: False
+  use_color_transfer: False
+  batch_size: 64
+  num_workers: 8
+
+  cat_list: [chair, bed, desk, sofa, bookcase, table, wardrobe, tool, misc]
+  cat_choice: [chair]
+
+  input_dim: 224
+
+  multiview:  
+    mv_dirname: neutral_multiviews_12
+    mv_num: 12
+    mv_dim: [224, 224]
+    mv_opt: crop
+
+  tour: 2
+  # random_model: False
+  test_only_occlusion: False
+  test_objects: all
+
+  unique_data_sampler: False
