@@ -2,7 +2,7 @@
 
 Qirui Wu, [Daniel Ritchie](https://dritchie.github.io/), [Manolis Savva](https://msavva.github.io/), [Angel Xuan Chang](http://angelxuanchang.github.io/)
 
-[[Paper](https://github.com/3dlg-hcvc/generalizing_shape_retrieval), [Project Page](https://github.com/3dlg-hcvc/generalizing_shape_retrieval), [Dataset](https://github.com/3dlg-hcvc/generalizing_shape_retrieval)]
+[[Paper](https://github.com/3dlg-hcvc/generalizing_shape_retrieval), [Project Page](https://3dlg-hcvc.github.io/generalizing_shape_retrieval/), [Dataset](https://github.com/3dlg-hcvc/generalizing_shape_retrieval#data)]
 
 <!-- ![](docs/images/teaser.png) -->
 <p><img src="docs/images/teaser.png" width="65%"></p>
@@ -140,6 +140,10 @@ python test.py -t test -e cmic_scan2cad --data_conf conf/dataset/scan2cad.yaml -
 **Note**
 - Add flags `--not_eval_acc --shape_feats_source <dataset>` to test on unseen 3D shapes.
 - Add flag `--save_eval_vis` to save retrieved 3D shape renderings and visualizations.
+
+## Acknowledgement
+
+We thank [Lewis Lin](https://github.com/LewisLinn) for helping developing the metric code in the early stage of the project.
 
 
 ## Bibtex
