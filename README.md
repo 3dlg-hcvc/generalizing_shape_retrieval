@@ -2,7 +2,7 @@
 
 Qirui Wu, [Daniel Ritchie](https://dritchie.github.io/), [Manolis Savva](https://msavva.github.io/), [Angel Xuan Chang](http://angelxuanchang.github.io/)
 
-[[Paper](https://github.com/3dlg-hcvc/generalizing_shape_retrieval), [Project Page](https://3dlg-hcvc.github.io/generalizing_shape_retrieval/), [Dataset](https://github.com/3dlg-hcvc/generalizing_shape_retrieval#data)]
+[[arXiv](https://arxiv.org/abs/2401.00405), [Project Page](https://3dlg-hcvc.github.io/generalizing_shape_retrieval/), [Dataset](https://github.com/3dlg-hcvc/generalizing_shape_retrieval#data)]
 
 <!-- ![](docs/images/teaser.png) -->
 <p><img src="docs/images/teaser.png" width="65%"></p>
@@ -149,10 +149,12 @@ We thank [Lewis Lin](https://github.com/LewisLinn) for helping developing the me
 ## Bibtex
 ```
 @article{wu2023generalizing,
-    author  = {Wu, Qirui and Ritchie Daniel and Savva, Manolis and Chang, Angel.X},
+    author  = {Wu, Qirui and Ritchie, Daniel and Savva, Manolis and Chang, Angel.X},
     title   = {{Generalizing Single-View 3D Shape Retrieval to Occlusions and Unseen Objects}},
     year    = {2023},
-    journal = {arXiv preprint arXiv:xxx}
+    eprint  = {2401.00405},
+    archivePrefix   = {arXiv},
+    primaryClass    = {cs.CV}
 }
 ```
 
