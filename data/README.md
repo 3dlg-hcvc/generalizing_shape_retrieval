@@ -18,7 +18,6 @@ gcmic
 │   │   ├── pix3d_obj.h5 # pointcloud for each shape
 │   │   ├── lfd_200.h5 # 200-view LFD for each shape
 │   │   ├── pix3d_pose.json # object pose info for rendering
-│   │   ├── ...
 ```
 
 Please refer to `../preprocess/pix3d/gen_dataset_hdf5.py`, `../preprocess/pix3d/get_all_lfd.py` and `../preprocess/pix3d/extract_pose_json.py` for how to prepare preprocessed data.

@@ -31,7 +31,10 @@ pip install "git+https://github.com/facebookresearch/pytorch3d.git@v0.7.3"
 
 Multi-Object Occlusion Scenes (MOOS) is generated using a heuristic algorithm that iteratively places newly sampled 3D shapes from [3D-FUTURE](https://tianchi.aliyun.com/specials/promotion/alibaba-3d-future) into the existing layout. Download MOOS **raw** and **preprocessed** data with the following command and extract/place them at `./data/moos`.
 ```sh
-cd data/moos && sh download.sh
+cd data/moos 
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/moos/scenes.zip && unzip scenes.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/moos/moos_annotations.zip && unzip moos_annotations.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/moos/moos_h5.tar && tar -xvf moos_h5.tar
 ```
 The data files should be organized as follows:
 ```shell
@@ -71,7 +74,10 @@ We generate 10K scenes with the script `./preprocess/moos/render_scenes.py`. Als
 
 Download Pix3D raw data [here](http://pix3d.csail.mit.edu/), and preprocessed data with the following command and extract/place them at `./data/pix3d`.
 ```sh
-cd data/pix3d && sh download.sh
+cd data/pix3d
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/pix3d/mask2former.zip && unzip mask2former.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/pix3d/pix3d_annotations.zip && unzip pix3d_annotations.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/pix3d/pix3d_h5.tar && tar -xvf pix3d_h5.tar
 ```
 Please refer to [details](./data/README.md#pix3d) for Pix3D data structure.
 
@@ -79,7 +85,10 @@ Please refer to [details](./data/README.md#pix3d) for Pix3D data structure.
 
 Download ScanNet25K images and CAD annotations from [ROCA data](https://github.com/cangumeli/ROCA#downloading-processed-data-recommended), and preprocessed data with the following command and extract/place them at `./data/scan2cad`.
 ```sh
-cd data/scan2cad && sh download.sh
+cd data/scan2cad
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/scan2cad/mask.zip && unzip mask.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/scan2cad/scan2cad_annotations.zip && unzip scan2cad_annotations.zip
+wget https://aspis.cmpt.sfu.ca/projects/gcmic/data/scan2cad/scan2cad_h5.tar && tar -xvf scan2cad_h5.tar
 ```
 Please refer to [details](./data/README.md#scan2cad) for Scan2CAD data structure. Download ShapeNet 3D shapes [here](https://shapenet.org/) if you want to render your own shape multiviews and LFDs.
 
